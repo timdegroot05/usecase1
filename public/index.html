@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overzicht Laptops - Stichting Asha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-300 z-20"></div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-[#07114d] text-white sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center space-x-4">
+                    <!-- Logo and text - hidden on mobile -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <img src="img/oase logo.png" alt="Stichting Asha Logo" class="h-8 w-8" />
+                        <span class="font-semibold text-lg">Stichting Asha</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="reserveringen.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Overzicht Reserveringen</span>
+                    </a>
+                    <a href="index.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Overzicht Laptops</span>
+                    </a>
+                    <a href="advies.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Adviezen</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Icons -->
+                <div class="flex md:hidden items-center mr-2">
+                    <a href="reserveringen.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="index.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="advies.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="fixed md:static top-16 md:top-0 inset-y-16 left-0 bg-[#E4C76B] text-black w-12 md:w-64 min-h-[calc(100vh-4rem)] border-r border-gray-700 z-20">
+            <nav class="p-2 md:p-4">
+                <ul class="space-y-1">
+                    <li>
+                        <a href="index.html" class="block text-black font-medium mb-4 flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z" />
+                            </svg>
+                            <span class="hidden md:inline">Overzicht Eigenschappen</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 md:p-8 ml-12 md:ml-0">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Laptop Overzicht</h2>
+                <select 
+                    id="laptopSelect"
+                    class="w-full md:w-64 p-2 border rounded-lg bg-white shadow-sm"
+                >
+                    <option value="">Selecteer een laptop</option>
+                </select>
+            </div>
+
+            <div id="propertiesList" class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Properties will be loaded here -->
+            </div>
+
+            <div id="noSelection" class="text-center text-gray-500 mt-8">
+                Selecteer een laptop om de eigenschappen te bekijken
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize laptops data
+        const laptops = [
+            {
+                id: 1,
+                name: "Dell Latitude 5520",
+                properties: [
+                    { id: 1, type: "CPU", value: "Intel i7-1165G7" },
+                    { id: 2, type: "RAM", value: "16GB DDR4" }
+                ]
+            },
+            {
+                id: 2,
+                name: "Lenovo ThinkPad T14",
+                properties: [
+                    { id: 3, type: "CPU", value: "AMD Ryzen 7 5800U" },
+                    { id: 4, type: "GPU", value: "Intel Iris Xe" }
+                ]
+            }
+        ];
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const laptopSelect = document.getElementById('laptopSelect');
+            const propertiesList = document.getElementById('propertiesList');
+            const noSelection = document.getElementById('noSelection');
+
+            // Load laptops into select
+            function loadLaptops() {
+                laptops.forEach(laptop => {
+                    const option = document.createElement('option');
+                    option.value = laptop.id;
+                    option.textContent = laptop.name;
+                    laptopSelect.appendChild(option);
+                });
+            }
+
+            // Load properties for selected laptop
+            function loadLaptopProperties(laptopId) {
+                const laptop = laptops.find(l => l.id === parseInt(laptopId));
+                
+                if (!laptop) {
+                    propertiesList.innerHTML = '';
+                    noSelection.style.display = 'block';
+                    return;
+                }
+
+                noSelection.style.display = 'none';
+                propertiesList.innerHTML = laptop.properties.map(prop => `
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="font-semibold text-lg mb-2">${prop.type}</h3>
+                        <p class="text-gray-600">${prop.value}</p>
+                    </div>
+                `).join('');
+            }
+
+            // Event Listeners
+            laptopSelect.addEventListener('change', (e) => {
+                loadLaptopProperties(e.target.value);
+            });
+
+            // Initialize
+            loadLaptops();
+        });
+
+        function resetReservations() {
+            localStorage.removeItem('reservations');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verstuurde Adviezen - Stichting Asha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-[#07114d] text-white sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-4">
+                        <img src="img/oase logo.png" alt="Stichting Asha Logo" class="h-8 w-8" />
+                        <span class="font-semibold text-lg">Stichting Asha</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="reserveringen.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Overzicht Reserveringen</span>
+                    </a>
+                    <a href="index.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Overzicht Laptops</span>
+                    </a>
+                    <a href="advies.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Adviezen</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Icons -->
+                <div class="flex md:hidden items-center mr-2">
+                    <a href="reserveringen.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="index.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="advies.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex min-h-screen pt-16"> <!-- Added pt-16 to account for the fixed navbar height -->
+        <!-- Sidebar -->
+        <aside class="fixed left-0 top-16 bg-[#E4C76B] text-black w-12 h-[calc(100vh-4rem)] border-r border-gray-700">
+            <nav class="p-2">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="advies.html" class="flex justify-center items-center p-2 text-black hover:bg-[#d4b75b] rounded-lg" title="Openstaande Adviezen">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                              </svg>                              
+                        </a>
+                    </li>
+                    <li>
+                        <a href="VerstuurdeAdviezen.html" class="flex justify-center items-center p-2 text-black hover:bg-[#d4b75b] rounded-lg" title="Verstuurde Adviezen">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                              </svg>                              
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 ml-12"> <!-- Added margin-left to prevent content from going under sidebar -->
+            <main class="p-4 md:p-8">
+                <div class="mb-6">
+                    <h1 class="text-xl md:text-2xl font-bold text-gray-900">Verstuurde Adviezen</h1>
+                </div>
+
+                <!-- Sent Advice List -->
+                <div id="verstuurdeAdviezenLijst" class="space-y-4">
+                    <!-- Advice cards will be added here dynamically -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Load sent advice from localStorage
+        function loadSentAdvice() {
+            const verstuurdeAdviezenLijst = document.getElementById('verstuurdeAdviezenLijst');
+            const sentAdvice = JSON.parse(localStorage.getItem('verstuurdeAdviezen') || '[]');
+
+            verstuurdeAdviezenLijst.innerHTML = sentAdvice.map(advice => `
+                <div class="bg-white rounded-lg shadow-md p-4 md:p-6 overflow-hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h2 class="text-lg font-semibold">${advice.naam}</h2>
+                            <p class="text-sm text-gray-600 break-all">${advice.email}</p>
+                        </div>
+                        <span class="px-2 py-1 text-sm ${advice.status === 'Meer informatie gevraagd' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'} rounded-full whitespace-nowrap">
+                            ${advice.status}
+                        </span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-medium text-gray-700">Gebruiksdoel</h3>
+                            <p class="mt-1">${advice.gebruiksdoel}</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-gray-700">Wensen</h3>
+                            <p class="mt-1 break-words">${advice.wensen}</p>
+                        </div>
+                        ${advice.status === 'Meer informatie gevraagd' ? `
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-700">Gevraagde Informatie</h3>
+                                <p class="mt-1 break-words">${advice.meerInfoVraag || ''}</p>
+                            </div>
+                        ` : `
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-700">Gegeven Advies</h3>
+                                <p class="mt-1 break-words">${advice.advies}</p>
+                            </div>
+                        `}
+                        ${advice.extraInfo ? `
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-700">Extra Informatie</h3>
+                                <p class="mt-1 break-words">${advice.extraInfo}</p>
+                            </div>
+                        ` : ''}
+                        <div class="text-sm text-gray-500">
+                            Verstuurd op: ${new Date(advice.datum).toLocaleString('nl-NL')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load sent advice when the page loads
+        document.addEventListener('DOMContentLoaded', loadSentAdvice);
+    </script>
+</body>
+</html>

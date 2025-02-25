@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Adviezen - Stichting Asha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-[#07114d] text-white sticky top-0 z-30">
+        <!-- Navigation content remains the same -->
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-4">
+                        <img src="img/oase logo.png" alt="Stichting Asha Logo" class="h-8 w-8" />
+                        <span class="font-semibold text-lg">Stichting Asha</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="reserveringen.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Overzicht Reserveringen</span>
+                    </a>
+                    <a href="index.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Overzicht Laptops</span>
+                    </a>
+                    <a href="advies.html" class="flex items-center space-x-2 hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Adviezen</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Icons -->
+                <div class="flex md:hidden items-center mr-2">
+                    <a href="reserveringen.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="index.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="advies.html" class="p-2 hover:bg-[#1a2f54] rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side Bar -->
+    <div class="flex min-h-screen pt-16"> 
+        <aside class="fixed left-0 top-16 bg-[#E4C76B] text-black w-12 h-[calc(100vh-4rem)] border-r border-gray-700">
+            <nav class="p-2">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="advies.html" class="flex justify-center items-center p-2 text-black hover:bg-[#d4b75b] rounded-lg" title="Openstaande Adviezen">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                            </svg>                              
+                        </a>
+                    </li>
+                    <li>
+                        <a href="VerstuurdeAdviezen.html" class="flex justify-center items-center p-2 text-black hover:bg-[#d4b75b] rounded-lg" title="Verstuurde Adviezen">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                              </svg>                              
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 md:p-8 ml-12"> <!-- Fixed margin-left to match sidebar width -->
+            <div class="mb-6">
+                <h1 class="text-xl md:text-2xl font-bold text-gray-900">Openstaande Adviesaanvragen</h1>
+            </div>
+
+            <!-- Pending Advice Requests will be loaded here -->
+            <div id="adviesAanvragen"></div>
+
+            <!-- Advice Form Modal -->
+            <div id="adviesFormulier" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+                <div class="relative top-20 mx-auto p-5 border w-full max-w-4xl shadow-lg rounded-lg bg-white">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold" id="modalTitle">Advies geven</h2>
+                        <button onclick="sluitAdviesFormulier()" class="text-gray-600 hover:text-gray-800">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <form id="adviesForm" class="space-y-6">
+                        <!-- Advice -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Advies</label>
+                            <textarea 
+                                id="advies" 
+                                rows="5" 
+                                class="w-full p-2 border rounded-lg"
+                                placeholder="Schrijf hier uw advies over geschikte laptops en specificaties"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Extra informatie</label>
+                            <textarea 
+                                id="extraInfo" 
+                                rows="3" 
+                                class="w-full p-2 border rounded-lg"
+                                placeholder="Voeg hier eventueel links of aanvullende informatie toe"
+                            ></textarea>
+                        </div>
+
+                        <!-- More Information Needed -->
+                        <div class="flex items-center">
+                            <input 
+                                type="checkbox" 
+                                id="meerInfoNodig" 
+                                class="h-4 w-4 text-blue-600 rounded border-gray-300"
+                            >
+                            <label class="ml-2 text-sm text-gray-700">
+                                Meer informatie nodig van de klant
+                            </label>
+                        </div>
+
+                        <!-- Additional Information Request -->
+                        <div id="meerInfoSection" class="hidden">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Welke informatie heeft u nog nodig?</label>
+                            <textarea 
+                                id="meerInfoVraag" 
+                                rows="3" 
+                                class="w-full p-2 border rounded-lg"
+                                placeholder="Beschrijf welke aanvullende informatie u nodig heeft van de klant"
+                            ></textarea>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex justify-end space-x-4">
+                            <button 
+                                type="button"
+                                onclick="sluitAdviesFormulier()"
+                                class="px-4 py-2 border rounded-lg hover:bg-gray-100"
+                            >
+                                Annuleren
+                            </button>
+                            <button 
+                                type="submit"
+                                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                            >
+                                Advies versturen
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="succesmelding" class="hidden fixed bottom-4 right-4 bg-green-100 text-green-700 p-4 rounded-lg shadow-lg flex items-center gap-2 z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span id="succesmeldingTekst"></span>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize pending advice in localStorage if not exists
+        if (!localStorage.getItem('openstaandeAdviezen')) {
+            const initialAdvice = [
+                {
+                    id: 1,
+                    naam: "Jan Jansen",
+                    email: "jan.jansen@email.com",
+                    gebruiksdoel: "Gaming",
+                    wensen: "Ik zoek een gaming laptop die Fortnite en Minecraft aankan. Budget is ongeveer €1000."
+                },
+                {
+                    id: 2,
+                    naam: "Emma de Vries",
+                    email: "emma.devries@email.com",
+                    gebruiksdoel: "Videobewerking",
+                    wensen: "Ik ben op zoek naar een laptop voor videobewerking met Adobe Premiere Pro. De laptop moet 4K video's kunnen verwerken."
+                },
+                {
+                    id: 3,
+                    naam: "Stefan de Boer",
+                    email: "stefan.deboer@gmail.com",
+                    gebruiksdoel: "Gamen en videobewerking",
+                    wensen: "Ik ben op zoek naar een laptop voor videobewerking en gamen."
+                }
+            ];
+            localStorage.setItem('openstaandeAdviezen', JSON.stringify(initialAdvice));
+        }
+
+        const adviesFormulier = document.getElementById('adviesFormulier');
+        const adviesForm = document.getElementById('adviesForm');
+        const meerInfoNodig = document.getElementById('meerInfoNodig');
+        const meerInfoSection = document.getElementById('meerInfoSection');
+        const succesmelding = document.getElementById('succesmelding');
+        const succesmeldingTekst = document.getElementById('succesmeldingTekst');
+        const adviesAanvragen = document.getElementById('adviesAanvragen');
+
+        // Function to load and display pending advice
+        function loadPendingAdvice() {
+            const pendingAdvice = JSON.parse(localStorage.getItem('openstaandeAdviezen') || '[]');
+            adviesAanvragen.innerHTML = '';
+
+            pendingAdvice.forEach(advice => {
+                const adviceCard = document.createElement('div');
+                adviceCard.className = 'bg-white rounded-lg shadow-md p-4 md:p-6 overflow-hidden mb-4';
+                adviceCard.setAttribute('data-advice-id', advice.id);
+                
+                adviceCard.innerHTML = `
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h2 class="text-lg font-semibold">${advice.naam}</h2>
+                            <p class="text-sm text-gray-600 break-all">${advice.email}</p>
+                        </div>
+                        <span class="px-2 py-1 text-sm bg-yellow-100 text-yellow-800 rounded-full whitespace-nowrap">Wachtend</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-medium text-gray-700">Gebruiksdoel</h3>
+                            <p class="mt-1">${advice.gebruiksdoel}</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-gray-700">Wensen</h3>
+                            <p class="mt-1 break-words">${advice.wensen}</p>
+                        </div>
+                        <button onclick="openAdviesFormulier(${advice.id})" class="w-full md:w-auto px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                            Reageren
+                        </button>
+                    </div>
+                `;
+                
+                adviesAanvragen.appendChild(adviceCard);
+            });
+        }
+
+        // Load pending advice when the page loads
+        document.addEventListener('DOMContentLoaded', loadPendingAdvice);
+
+        // Show/hide additional information section
+        meerInfoNodig.addEventListener('change', (e) => {
+            meerInfoSection.classList.toggle('hidden', !e.target.checked);
+            if (e.target.checked) {
+                document.getElementById('meerInfoVraag').setAttribute('required', '');
+                document.getElementById('advies').removeAttribute('required');
+            } else {
+                document.getElementById('meerInfoVraag').removeAttribute('required');
+                document.getElementById('advies').setAttribute('required', '');
+            }
+        });
+
+        // Form submission
+        adviesForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get the current advice request data
+            const currentAdviceId = adviesForm.dataset.adviceId;
+            const openstaandeAdviezen = JSON.parse(localStorage.getItem('openstaandeAdviezen') || '[]');
+            const currentAdvice = openstaandeAdviezen.find(advice => advice.id.toString() === currentAdviceId);
+
+            if (currentAdvice) {
+                const adviceData = {
+                    ...currentAdvice,
+                    advies: document.getElementById('advies').value,
+                    extraInfo: document.getElementById('extraInfo').value,
+                    datum: new Date().toISOString(),
+                    status: meerInfoNodig.checked ? 'Meer informatie gevraagd' : 'Beantwoord'
+                };
+
+                // Save to verstuurdeAdviezen in localStorage
+                const verstuurdeAdviezen = JSON.parse(localStorage.getItem('verstuurdeAdviezen') || '[]');
+                verstuurdeAdviezen.push(adviceData);
+                localStorage.setItem('verstuurdeAdviezen', JSON.stringify(verstuurdeAdviezen));
+
+                // Remove from openstaandeAdviezen
+                const updatedOpenstaand = openstaandeAdviezen.filter(advice => advice.id.toString() !== currentAdviceId);
+                localStorage.setItem('openstaandeAdviezen', JSON.stringify(updatedOpenstaand));
+
+                // Reload the pending advice display
+                loadPendingAdvice();
+                
+                if (meerInfoNodig.checked) {
+                    toonSuccesmelding('Verzoek om meer informatie is verstuurd naar de klant.');
+                } else {
+                    toonSuccesmelding('Advies is succesvol verstuurd naar de klant.');
+                }
+            }
+            
+            // Reset form and close modal
+            adviesForm.reset();
+            meerInfoSection.classList.add('hidden');
+            sluitAdviesFormulier();
+        });
+
+        // Open advice form modal
+        function openAdviesFormulier(id) {
+            adviesFormulier.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            adviesForm.dataset.adviceId = id;
+        }
+
+        // Close advice form modal
+        function sluitAdviesFormulier() {
+            adviesFormulier.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            adviesForm.reset();
+            meerInfoSection.classList.add('hidden');
+        }
+
+        // Show success message
+        function toonSuccesmelding(bericht) {
+            succesmeldingTekst.textContent = bericht;
+            succesmelding.classList.remove('hidden');
+            setTimeout(() => {
+                succesmelding.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
