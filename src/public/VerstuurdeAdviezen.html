@@ -104,58 +104,52 @@
     </div>
 
     <script>
-        // Load sent advice from localStorage
-        function loadSentAdvice() {
-            const verstuurdeAdviezenLijst = document.getElementById('verstuurdeAdviezenLijst');
-            const sentAdvice = JSON.parse(localStorage.getItem('verstuurdeAdviezen') || '[]');
+    // Load sent advice from localStorage
+    function loadSentAdvice() {
+        const verstuurdeAdviezenLijst = document.getElementById('verstuurdeAdviezenLijst');
+        const sentAdvice = JSON.parse(localStorage.getItem('verstuurdeAdviezen') || '[]');
 
-            verstuurdeAdviezenLijst.innerHTML = sentAdvice.map(advice => `
-                <div class="bg-white rounded-lg shadow-md p-4 md:p-6 overflow-hidden">
-                    <div class="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
-                        <div>
-                            <h2 class="text-lg font-semibold">${advice.naam}</h2>
-                            <p class="text-sm text-gray-600 break-all">${advice.email}</p>
-                        </div>
-                        <span class="px-2 py-1 text-sm ${advice.status === 'Meer informatie gevraagd' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'} rounded-full whitespace-nowrap">
-                            ${advice.status}
-                        </span>
+        verstuurdeAdviezenLijst.innerHTML = sentAdvice.map(advice => `
+            <div class="bg-white rounded-lg shadow-md p-4 md:p-6 overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+                    <div>
+                        <h2 class="text-lg font-semibold">${advice.naam}</h2>
+                        <p class="text-sm text-gray-600 break-all">${advice.email}</p>
                     </div>
-                    <div class="space-y-4">
+                    <span class="px-2 py-1 text-sm ${advice.status === 'Meer informatie gevraagd' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'} rounded-full whitespace-nowrap">
+                        ${advice.status}
+                    </span>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-700">Gebruiksdoel</h3>
+                        <p class="mt-1">${advice.gebruiksdoel}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-700">Wensen</h3>
+                        <p class="mt-1 break-words">${advice.wensen}</p>
+                    </div>
+                    ${advice.status === 'Meer informatie gevraagd' ? `
                         <div>
-                            <h3 class="text-sm font-medium text-gray-700">Gebruiksdoel</h3>
-                            <p class="mt-1">${advice.gebruiksdoel}</p>
+                            <h3 class="text-sm font-medium text-gray-700">Gevraagde Informatie</h3>
+                            <p class="mt-1 break-words">${advice.meerInfoVraag || ''}</p>
                         </div>
+                    ` : `
                         <div>
-                            <h3 class="text-sm font-medium text-gray-700">Wensen</h3>
-                            <p class="mt-1 break-words">${advice.wensen}</p>
+                            <h3 class="text-sm font-medium text-gray-700">Gegeven Advies</h3>
+                            <p class="mt-1 break-words">${advice.advies}</p>
                         </div>
-                        ${advice.status === 'Meer informatie gevraagd' ? `
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-700">Gevraagde Informatie</h3>
-                                <p class="mt-1 break-words">${advice.meerInfoVraag || ''}</p>
-                            </div>
-                        ` : `
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-700">Gegeven Advies</h3>
-                                <p class="mt-1 break-words">${advice.advies}</p>
-                            </div>
-                        `}
-                        ${advice.extraInfo ? `
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-700">Extra Informatie</h3>
-                                <p class="mt-1 break-words">${advice.extraInfo}</p>
-                            </div>
-                        ` : ''}
-                        <div class="text-sm text-gray-500">
-                            Verstuurd op: ${new Date(advice.datum).toLocaleString('nl-NL')}
-                        </div>
+                    `}
+                    <div class="text-sm text-gray-500">
+                        Verstuurd op: ${new Date(advice.datum).toLocaleString('nl-NL')}
                     </div>
                 </div>
-            `).join('');
-        }
+            </div>
+        `).join('');
+    }
 
-        // Load sent advice when the page loads
-        document.addEventListener('DOMContentLoaded', loadSentAdvice);
+    // Load sent advice when the page loads
+    document.addEventListener('DOMContentLoaded', loadSentAdvice);
     </script>
 </body>
 </html>

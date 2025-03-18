@@ -16,7 +16,6 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Brand -->
                 <div class="flex items-center space-x-4">
-                    <!-- Logo and text - hidden on mobile -->
                     <div class="flex items-center space-x-4">
                         <img src="img/oase logo.png" alt="Stichting Asha Logo" class="h-8 w-8" />
                         <span class="font-semibold text-lg">Stichting Asha</span>
@@ -125,8 +124,11 @@
             <!-- Modification Modal -->
             <div id="modifyModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
                 <div class="relative top-20 mx-auto p-5 border w-full max-w-4xl shadow-lg rounded-lg bg-white">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-bold">Laptop Aanpassen</h2>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold" id="modalTitle">Laptop Aanpassen</h2>
+                            <div id="laptopInfo" class="mt-2 text-sm text-gray-600"></div>
+                        </div>
                         <button onclick="closeModifyModal()" class="text-gray-600 hover:text-gray-800">
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -149,7 +151,7 @@
                             <div class="space-y-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Browser</label>
-                                    <select id="browser" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                    <select id="browser" class="mt-1 block w-full rounded-md border-black border-2 shadow-sm p-2">
                                         <option value="chrome">Google Chrome</option>
                                         <option value="firefox">Mozilla Firefox</option>
                                         <option value="edge">Microsoft Edge</option>
@@ -158,7 +160,7 @@
 
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Zoekmachine Instellingen</label>
-                                    <select id="searchEngine" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                    <select id="searchEngine" class="mt-1 block w-full rounded-md border-black border-2 shadow-sm p-2">
                                         <option value="google-normal">Google - Normaal zoeken</option>
                                         <option value="google-safe">Google - Veilig zoeken</option>
                                         <option value="bing-normal">Bing - Normaal zoeken</option>
@@ -218,9 +220,93 @@
                     <!-- Saved modifications will be displayed here -->
                 </div>
             </div>
+
+            <!-- Example Request Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 mt-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Voorbeeld Aanvraagformulier voor Klanten</h2>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Naam</label>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Voer uw naam in"
+                                        class="w-full p-2 border-2 border-gray-300 rounded-md bg-gray-100 cursor-not-allowed"
+                                        disabled
+                                    >
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mailadres</label>
+                                    <input 
+                                        type="email" 
+                                        placeholder="voorbeeld@email.com"
+                                        class="w-full p-2 border-2 border-gray-300 rounded-md bg-gray-100 cursor-not-allowed"
+                                        disabled
+                                    >
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Gebruiksdoel</label>
+                                <select class="w-full p-2 border-2 border-gray-300 rounded-md bg-gray-100 cursor-not-allowed" disabled>
+                                    <option>Kies een gebruiksdoel</option>
+                                    <option>Studie</option>
+                                    <option>Gaming</option>
+                                    <option>Werk</option>
+                                    <option>Anders</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Beschrijf uw wensen</label>
+                                <textarea 
+                                    rows="4"
+                                    placeholder="Beschrijf hier waarvoor u de laptop wilt gebruiken en welke specifieke eisen u heeft..."
+                                    class="w-full p-2 border-2 border-gray-300 rounded-md bg-gray-100 cursor-not-allowed"
+                                    disabled
+                                ></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Gewenste software (meerdere opties mogelijk)</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="rounded border-gray-300 cursor-not-allowed" disabled>
+                                        <span class="text-gray-600">Microsoft Office (Word, Excel, PowerPoint)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="rounded border-gray-300 cursor-not-allowed" disabled>
+                                        <span class="text-gray-600">Adobe Reader</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="rounded border-gray-300 cursor-not-allowed" disabled>
+                                        <span class="text-gray-600">Google Chrome</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="rounded border-gray-300 cursor-not-allowed" disabled>
+                                        <span class="text-gray-600">Andere software (specificeer in beschrijving)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="pt-4">
+                                <button 
+                                    type="button"
+                                    class="w-full bg-gray-400 text-white py-2 px-4 rounded-md cursor-not-allowed"
+                                    disabled
+                                >
+                                    Aanvraag Versturen (Voorbeeld)
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4">
+                        Dit is een voorbeeld van hoe klanten een wens kunnen aanvragen. Het formulier is uitgeschakeld omdat dit alleen ter demonstratie is.
+                    </p>
+                </div>
         </main>
     </div>
-
 
     <script>
         // Reset function
@@ -236,7 +322,6 @@
                         software: []
                     },
                     isOld: false,
-                    modifications: [],
                     clientWish: 'Wil graag een laptop voor gaming en schoolwerk'
                 },
                 2: {
@@ -249,11 +334,11 @@
                         software: ['office']
                     },
                     isOld: false,
-                    modifications: [],
                     clientWish: 'Heeft een laptop nodig voor studie, met Microsoft Office'
                 }
             };
             localStorage.setItem('laptops', JSON.stringify(initialLaptops));
+            localStorage.setItem('completedModifications', '[]');
             loadLaptopsList();
             loadSavedModifications();
         }
@@ -261,6 +346,9 @@
         // Initialize data if not exists
         if (!localStorage.getItem('laptops')) {
             resetWensen();
+        }
+        if (!localStorage.getItem('completedModifications')) {
+            localStorage.setItem('completedModifications', '[]');
         }
 
         // DOM Elements
@@ -275,6 +363,11 @@
         function loadLaptopsList() {
             const laptopsList = document.getElementById('laptopsList');
             const laptops = JSON.parse(localStorage.getItem('laptops') || '{}');
+
+            if (Object.keys(laptops).length === 0) {
+                laptopsList.innerHTML = '<p class="text-gray-500 text-center">Geen openstaande wensen gevonden.</p>';
+                return;
+            }
 
             laptopsList.innerHTML = Object.values(laptops).map(laptop => `
                 <div class="bg-white rounded-lg shadow-md p-6">
@@ -301,66 +394,13 @@
             `).join('');
         }
 
-        // Update loadSavedModifications to include client information
+        // Load saved modifications
         function loadSavedModifications() {
-            const laptops = JSON.parse(localStorage.getItem('laptops') || '{}');
-            const allModifications = Object.values(laptops)
-                .flatMap(laptop => (laptop.modifications || []).map(mod => ({
-                    ...mod,
-                    laptopName: laptop.name,
-                    userName: laptop.user,
-                    clientWish: laptop.clientWish
-                })))
-                .sort((a, b) => new Date(b.date) - new Date(a.date));
+            const completedModifications = JSON.parse(localStorage.getItem('completedModifications') || '[]');
+            const sortedModifications = completedModifications.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            savedModificationsContainer.innerHTML = allModifications.length ? 
-                allModifications.map(mod => `
-                    <div class="border rounded-lg p-4 bg-gray-50">
-                        <div class="flex flex-col gap-2 mb-4">
-                            <h3 class="font-medium text-lg">Aanpassing op ${new Date(mod.date).toLocaleDateString()}</h3>
-                            <div class="bg-blue-50 p-3 rounded-md">
-                                <p class="text-sm text-gray-700"><strong>Laptop:</strong> ${mod.laptopName}</p>
-                                <p class="text-sm text-gray-700"><strong>Klant:</strong> ${mod.userName}</p>
-                                <p class="text-sm text-gray-700"><strong>Oorspronkelijke wens:</strong> ${mod.clientWish}</p>
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-gray-700"><strong>Uitgevoerde aanpassingen:</strong></p>
-                            <ul class="list-disc list-inside text-gray-600 ml-4">
-                                <li>Browser: ${mod.specs.browser}</li>
-                                <li>Zoekmachine: ${mod.specs.searchEngine}</li>
-                                <li>Software: ${mod.specs.software.join(', ') || 'Geen'}</li>
-                            </ul>
-                            <div class="mt-4 p-3 bg-gray-100 rounded-md">
-                                <p class="text-gray-700"><strong>Notities:</strong> ${mod.notes}</p>
-                            </div>
-                        </div>
-                    </div>
-                `).join('') :
-                '<p class="text-gray-500">Geen opgeslagen aanpassingen gevonden.</p>';
-        }
-
-        // Initialize displays
-        document.addEventListener('DOMContentLoaded', () => {
-            loadLaptopsList();
-            loadSavedModifications();
-        });
-
-
-        // Update loadSavedModifications to include client information
-        function loadSavedModifications() {
-            const laptops = JSON.parse(localStorage.getItem('laptops'));
-            const allModifications = Object.values(laptops)
-                .flatMap(laptop => (laptop.modifications || []).map(mod => ({
-                    ...mod,
-                    laptopName: laptop.name,
-                    userName: laptop.user,
-                    clientWish: laptop.clientWish
-                })))
-                .sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            savedModificationsContainer.innerHTML = allModifications.length ? 
-                allModifications.map(mod => `
+            savedModificationsContainer.innerHTML = sortedModifications.length ? 
+                sortedModifications.map(mod => `
                     <div class="border rounded-lg p-4 bg-gray-50">
                         <div class="flex flex-col gap-2 mb-4">
                             <h3 class="font-medium text-lg">Aanpassing op ${new Date(mod.date).toLocaleDateString()}</h3>
@@ -392,11 +432,29 @@
             const laptops = JSON.parse(localStorage.getItem('laptops'));
             const laptop = laptops[laptopId];
 
+            // Update modal title and info
+            document.getElementById('laptopInfo').innerHTML = `
+                <div class="bg-blue-50 p-3 rounded-md mt-2">
+                    <p class="mb-1"><strong>Laptop:</strong> ${laptop.name}</p>
+                    <p class="mb-1"><strong>Gebruiker:</strong> ${laptop.user}</p>
+                    <p><strong>Wens van klant:</strong> ${laptop.clientWish}</p>
+                </div>
+            `;
+
             document.getElementById('currentSpecs').innerHTML = `
                 <li>Browser: ${laptop.specs.browser}</li>
                 <li>Zoekmachine: ${laptop.specs.searchEngine}</li>
                 <li>Software: ${laptop.specs.software.join(', ') || 'Geen'}</li>
             `;
+
+            // Set current values in form
+            document.getElementById('browser').value = laptop.specs.browser;
+            document.getElementById('searchEngine').value = laptop.specs.searchEngine;
+            
+            // Reset and set checkboxes
+            document.querySelectorAll('input[name="software"]').forEach(checkbox => {
+                checkbox.checked = laptop.specs.software.includes(checkbox.value);
+            });
 
             modifyModal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
@@ -410,13 +468,13 @@
             validationMessage.classList.add('hidden');
         }
 
-        // Show message with updated z-index and positioning
+        // Show message
         function showMessage(message, isError = false) {
             const messageElement = document.createElement('div');
             messageElement.className = `fixed bottom-4 right-4 p-4 rounded-lg z-[100] ${
                 isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'
             }`;
-            messageElement.style.zIndex = '9999'; // Ensure it's above everything
+            messageElement.style.zIndex = '9999';
             messageElement.textContent = message;
             document.body.appendChild(messageElement);
             setTimeout(() => messageElement.remove(), 3000);
@@ -439,7 +497,6 @@
             const laptops = JSON.parse(localStorage.getItem('laptops'));
             const laptop = laptops[currentLaptopId];
 
-            // Validation checks
             if (!modifications) {
                 showMessage('Aanpassingen moeten worden genoteerd voordat ze kunnen worden opgeslagen.', true);
                 return;
@@ -455,36 +512,40 @@
                 return;
             }
 
-            // Save modifications
             const newSpecs = {
                 browser: document.getElementById('browser').value,
                 searchEngine: document.getElementById('searchEngine').value,
                 software: Array.from(document.querySelectorAll('input[name="software"]:checked')).map(cb => cb.value)
             };
 
-            // Update laptop specs
-            laptop.specs = newSpecs;
-            
-            // Add to modifications history
-            if (!laptop.modifications) laptop.modifications = [];
-            laptop.modifications.push({
+            // Create completed modification entry
+            const completedModification = {
                 date: new Date().toISOString(),
                 specs: newSpecs,
-                notes: modifications
-            });
+                notes: modifications,
+                laptopName: laptop.name,
+                userName: laptop.user,
+                clientWish: laptop.clientWish
+            };
 
+            // Add to completed modifications
+            const completedModifications = JSON.parse(localStorage.getItem('completedModifications') || '[]');
+            completedModifications.push(completedModification);
+            localStorage.setItem('completedModifications', JSON.stringify(completedModifications));
+
+            // Remove laptop from active list
+            delete laptops[currentLaptopId];
             localStorage.setItem('laptops', JSON.stringify(laptops));
             
-            showMessage('De aanpassingen zijn succesvol opgeslagen en genoteerd.');
+            showMessage('De aanpassingen zijn succesvol opgeslagen en verplaatst naar opgeslagen aanpassingen.');
             closeModifyModal();
             
-            // Refresh displays
             loadLaptopsList();
             loadSavedModifications();
         });
 
-                // Initialize displays
-                document.addEventListener('DOMContentLoaded', () => {
+        // Initialize displays
+        document.addEventListener('DOMContentLoaded', () => {
             loadLaptopsList();
             loadSavedModifications();
         });
@@ -494,21 +555,25 @@
         const sidebar = document.querySelector('aside');
         const overlay = document.getElementById('sidebarOverlay');
 
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('-translate-x-full');
-            if (sidebar.classList.contains('-translate-x-full')) {
-                overlay.classList.add('opacity-0', 'pointer-events-none');
-            } else {
-                overlay.classList.remove('opacity-0', 'pointer-events-none');
-                overlay.classList.add('opacity-50', 'pointer-events-auto');
-            }
-        });
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+                if (sidebar.classList.contains('-translate-x-full')) {
+                    overlay.classList.add('opacity-0', 'pointer-events-none');
+                } else {
+                    overlay.classList.remove('opacity-0', 'pointer-events-none');
+                    overlay.classList.add('opacity-50', 'pointer-events-auto');
+                }
+            });
+        }
 
-        overlay.addEventListener('click', () => {
-            sidebar.classList.add('-translate-x-full');
-            overlay.classList.add('opacity-0', 'pointer-events-none');
-            overlay.classList.remove('opacity-50', 'pointer-events-auto');
-        });
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-50', 'pointer-events-auto');
+            });
+        }
     </script>
 </body>
 </html>
